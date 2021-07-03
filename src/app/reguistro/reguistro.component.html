@@ -1,0 +1,27 @@
+<div class="imagen1">
+  <section class="form-register">
+    <h4>Formulario Registro</h4>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <input class="controls" type="text" name="nombres" id="nombre" placeholder="Ingrese su Nombre"
+        formControlName="nombre">
+
+      <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido"
+        formControlName="apellidos">
+
+      <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo"
+        formControlName="correo">
+
+      <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña"
+        formControlName="contraseña">
+
+        <div class="boton">
+      <div class="form-group col-md-12 col text-center ">
+        <button type="submit" class="btn btn-primary btn-lg active  ">Registrarse</button>
+      </div>
+    </div>
+      <p><a href="login">¿Ya tengo Cuenta?</a></p>
+    </form>
+  </section>
+</div>

@@ -1,0 +1,36 @@
+<div class="login">
+    <main>
+        <div class="background">
+            <div class="text">
+                <h1>bienvenid@</h1>
+               <p>A nuestro sistema de informacion</p>
+               <p>esperamos que tengas una satisfactoria estadia</p>
+            </div>
+            <div class="box">
+                <div class="Color">
+                <form  [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+                    
+                    <input formControlName="email" type="text" class="form-control" placeholder="correo" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">El email es obligatorio</div>
+                        <div *ngIf="f.email.errors.email">Por favor, ingresa tu Email</div>
+                    </div>
+
+                    
+                    <input formControlName="password" type="password" class="password" placeholder="contraseña" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Por favor, ingresa una contraseña nueva</div>
+                    </div>
+
+                   <a href="" class="button"  type="submit">Siguiente</a>
+<br>
+                   <div *ngIf="load" class="form-group col-md-12">
+                    <button type="submit" class="btn btn-primary btn-lg active ">Registrarse</button>
+                </div>
+                                    
+                </form>
+            </div>
+            </div>
+        </div>
+    </main>
+</div>
